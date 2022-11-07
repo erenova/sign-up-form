@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'norsebold';
+    src: url('assets/norse-bold-webfont.woff2') format('woff2'),
+         url('assets/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'info-text';
+    src: url('assets/f2.woff2') format('woff2'),
+         url('assets/f1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body {
+    display: flex;
+    align-items: center;
+}
+
+
+.bg {
+    display: flex;
+    background-image: url(assets/p0.jpg);
+    background-repeat: no-repeat;
+    background-size: 35vw 100vh;
+    width: 35vw;
+    height: 100vh;
+    opacity: 0.65;
+    justify-content: center;
+}
+
+
+.bg>div {
+    font-family: 'norsebold', Courier, monospace;
+    display: flex;
+    font-size: 3rem;
+    margin-top: 12px;
+    justify-content: center;
+    opacity: 1;
+}
+
+
+.sign-form {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    width: 40vw;
+    border-radius: 20px;
+    height: 75vh;
+    margin-left: 12vw;
+    justify-content: center;
+}
+
+.info-text {
+    font-family: 'info-text' ;
+    margin-top: 2vw;
+    color: rgb(0, 86, 172);
+}
+
+input[type="text"] {
+    margin-top: 45px;
+    width: 100px;
+}
+
+label[for="lastname"] {
+    margin-left: 50px;
+}
+
+input[id='username']:invalid {
+    border-color: red;
+}
+
+input[id='lastname']:invalid {
+    border-color: red;
+}
+input[id='username']:valid,input[id='lastname']:valid {
+    border: 4px solid green;
+    border-color: green;
+}
+
+input[id='username']:focus,input[id='lastname']:focus {
+border-color: green;
+
+}
+
+input[type="email"] {
+    width: 170px;
+    margin-top: 120px;
+}
+
+input[type="number"] {
+    width: 170px;
+}
+
+label[for="num"]{
+    margin-left: 50px;
+}
+
+input[type="password"] {
+    width: 150px;
+    margin-top: 100px;
+}
+
+
+label[for="password"]{
+    margin-left: 150px;
+}
+
+#butt {
+    margin-top: 50px;
+    margin-left: 500px;
+}
+
+input[type="password"]:invalid {
+    border-color: red;
+}
+
+input[type="password"]:valid {
+    border: 4px solid green;
+
+}
