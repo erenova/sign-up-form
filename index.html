@@ -1,43 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reset.css">
-    <script src="script.js" defer></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-up form</title>
-</head>
-<body>
-    <div class="bg">
-        <div>Lorem Ipsum</div>
-    </div>
-    <div class="sign-form">
-        <div class="info-text">This form is for participating in the architect competition.
-        <form action="">
-        <div id="reg-name"> 
-            <label for="username">First name:</label>
-            <input type="text" name="user_name" id="username" required>
-            <label for="lastname">Last name:</label>
-            <input type="text" name="user_lastname" id="lastname" required>
-        </div>
-        
-        <div id="optional">
-            <label for="mail">e-mail:</label>
-            <input type="email" name="email" id="mail">
-            <label for="num">number:</label>
-            <input type="number" name="number" id="num" pattern="">
-        </div>
-        <div id="password">
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" required>
-            
-        </div>
 
-        <button type="submit" id="butt">submit</button>
-    </form>        
-    </div>
+<head>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Form</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="image-section">
+            <img src="images/img.jpg" alt="" id="background">
+            <div class="text-section">
+                <img class="odin-img" src="images/odin-lined.png" alt="">
+                <div class="text">Sign-UP For Stay Up To Date</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-section">
+                <div class="bold-header">
+                    <p class="form-text">This is not a real online service! You know you need something like this in
+                        your
+                        life to help you
+                        realize your deepest dreams.
+                    <p class="form-text">Sign up <span style="font-style: italic;">now</span> to get started.</p>
+                    </p>
+                    <p class="form-text">You know you want to.</p>
+                    <h2 class="form-action-text" style='font-family: "norsebold"; color: rgb(134, 133, 134);'>Let's take
+                        action</h2>
+                </div>
+
+                <form id="form">
+                    <div class="holder">
+
+                        <div class="row-one">
+                            <label for="firstname">First Name:
+                                <input required type="text" name="firstName" id="firstname" class="passed"></label>
+                            <label for="lastname">Last Name:
+                                <input required type="text" name="lastName" id="lastname" class="passed"></label>
+                        </div>
+                        <div class="row-two">
+                            <label for="email">Email:
+                                <input type="email" name="mail" class="passed" id="email"></label>
+                            <label for="phone-number">Phone Number:
+                                <input type="tel" name="PhoneNumber" id="phone-number" class="passed"
+                                    pattern="\d*"></label>
+                        </div>
+                        <div class="row-two">
+                            <label for="password">Password:
+                                <input required type="password" class="invalid" name="password" id="password"></label>
+                            <label for="password-check">Confirm Password:
+                                <input required type="password" class="invalid" name="passwordCheck"
+                                    id="password-check"></label>
+                        </div>
+                    </div>
+                    <div class="form-alt-section">
+                        <button type="submit" class="button-submit">Create Account</button>
+                        <div class="already-text">Already have an account? <div href="#" class="anchor-login">Log
+                                in</div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
