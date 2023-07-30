@@ -1,122 +1,240 @@
 @font-face {
-    font-family: 'norsebold';
-    src: url('assets/norse-bold-webfont.woff2') format('woff2'),
-         url('assets/norse-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "norsebold";
+  src: url("fonts/norse-bold-webfont.woff2") format("woff2"),
+    url("fonts/norse-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-@font-face {
-    font-family: 'info-text';
-    src: url('assets/f2.woff2') format('woff2'),
-         url('assets/f1.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 
-}
 body {
-    display: flex;
-    align-items: center;
+  background-color: aliceblue;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-
-.bg {
-    display: flex;
-    background-image: url(assets/p0.jpg);
-    background-repeat: no-repeat;
-    background-size: 35vw 100vh;
-    width: 35vw;
-    height: 100vh;
-    opacity: 0.65;
-    justify-content: center;
+* {
+  box-sizing: border-box;
 }
 
-
-.bg>div {
-    font-family: 'norsebold', Courier, monospace;
-    display: flex;
-    font-size: 3rem;
-    margin-top: 12px;
-    justify-content: center;
-    opacity: 1;
+.main {
+  display: flex;
+  height: 100vh;
 }
 
-
-.sign-form {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    display: flex;
-    width: 40vw;
-    border-radius: 20px;
-    height: 75vh;
-    margin-left: 12vw;
-    justify-content: center;
+.image-section {
+  position: relative;
+  width: 35vw;
+  height: 100%;
+}
+.text-section {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.text {
+  color: white;
+  font-size: 3rem;
+  font-weight: bolder;
+  font-family: "norsebold";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(76, 175, 80, 0.6);
+  height: 20%;
+  width: 100%;
+}
+#background {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
-.info-text {
-    font-family: 'info-text' ;
-    margin-top: 2vw;
-    color: rgb(0, 86, 172);
+/** Form styling */
+
+.content {
+  position: relative;
+  height: 100%;
+  width: 65vw;
 }
 
-input[type="text"] {
-    margin-top: 45px;
-    width: 100px;
+.content-section {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  height: 80%;
+  width: 700px;
 }
 
-label[for="lastname"] {
-    margin-left: 50px;
+.form-text {
+  font-family: monospace;
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
 
-input[id='username']:invalid {
-    border-color: red;
+.holder {
+  box-shadow: 24px 21px 15px -3px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  font-family: "norsebold";
+  border: 1px solid whitesmoke;
 }
 
-input[id='lastname']:invalid {
-    border-color: red;
-}
-input[id='username']:valid,input[id='lastname']:valid {
-    border: 4px solid green;
-    border-color: green;
-}
-
-input[id='username']:focus,input[id='lastname']:focus {
-border-color: green;
-
+.row-one,
+.row-two {
+  display: flex;
+  gap: 50px;
+  margin: 20px;
 }
 
-input[type="email"] {
-    width: 170px;
-    margin-top: 120px;
+label[for="firstname"],
+label[for="lastname"],
+label[for="phone-number"],
+label[for="email"],
+label[for="password"],
+label[for="password-check"] {
+  display: flex;
+  flex-direction: column;
 }
 
-input[type="number"] {
-    width: 170px;
+input {
 }
 
-label[for="num"]{
-    margin-left: 50px;
+.form-alt-section {
+  margin-top: 30px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-input[type="password"] {
-    width: 150px;
-    margin-top: 100px;
+.button-submit {
+  font-family: monospace;
+  width: 8rem;
+  height: 4rem;
+  background-color: #596d48;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  color: whitesmoke;
+  box-shadow: 24px 21px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all ease 300ms;
+}
+.button-submit:hover {
+  cursor: pointer;
+  scale: 1.2;
+}
+.button-submit:active {
+  cursor: default;
+  scale: 1;
+  transition: all ease 150ms;
 }
 
-
-label[for="password"]{
-    margin-left: 150px;
+.anchor-login {
+  color: #596d48;
+  font-weight: bolder;
+  text-decoration: none;
+  transition: 300ms all ease-in-out;
 }
 
-#butt {
-    margin-top: 50px;
-    margin-left: 500px;
+.anchor-login:hover {
+  cursor: pointer;
+  transform: scale(1.2) RotateZ(-10deg);
 }
 
-input[type="password"]:invalid {
-    border-color: red;
+.already-text {
+  display: flex;
+  gap: 5px;
+}
+input {
+  width: 100%;
+  height: 25px;
+  margin-top: 10px;
+  border: 2px solid rgba(211, 221, 219, 0.5);
+  background-color: #f0f0f0;
+  transition: all 100ms ease-out;
 }
 
-input[type="password"]:valid {
-    border: 4px solid green;
+input:focus {
+  outline: none;
+  transform: scale(1.1);
+  transform: RotateX(360deg);
+}
+.passed:focus:invalid {
+  border: 2px solid darkred;
+}
 
+.passed:invalid {
+  border: 1px solid salmon;
+}
+
+.passed:valid {
+  border: 1px solid rgba(0, 255, 76, 0.5);
+}
+.passed:focus:valid {
+  border: 2px solid green;
+}
+
+.invalid {
+  border: 2px solid darkred;
+}
+
+.valid {
+  border: 2px solid green;
+}
+
+.odin-img {
+  width: 10rem;
+}
+@media only screen and (max-width: 1100px) {
+  .content-section {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .content-section {
+    width: 400px;
+  }
+  .text {
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .content-section {
+    width: 300px;
+  }
+  .form-text {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .content-section {
+    width: 200px;
+  }
+  .form-text {
+    font-size: 1rem;
+  }
+  .odin-img {
+    width: 6rem;
+  }
+}
+@media only screen and (max-height: 700px) {
+  .main {
+    height: 120vh;
+  }
+  .image-section {
+    height: 100%;
+  }
+  body {
+    overflow: auto;
+  }
 }
