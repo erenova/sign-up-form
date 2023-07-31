@@ -227,7 +227,7 @@ input:focus {
     width: 6rem;
   }
 }
-@media only screen and (max-height: 700px) {
+@media only screen and (max-height: 800px) {
   .main {
     height: 120vh;
   }
@@ -235,6 +235,6 @@ input:focus {
     height: 100%;
   }
   body {
-    overflow: auto;
+    overflow: scroll;
   }
 }
